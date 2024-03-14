@@ -1,0 +1,50 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import com.jfoenix.controls.JFXButton?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.text.Font?>
+
+<AnchorPane prefHeight="400.0" prefWidth="600.0" xmlns="http://javafx.com/javafx/21" xmlns:fx="http://javafx.com/fxml/1" fx:controller="ru.fsv67.controllers.MainScreenController">
+    <children>
+        <AnchorPane prefHeight="150.0" prefWidth="600.0" style="-fx-background-color: #6291bd;">
+            <children>
+                <Label alignment="CENTER" prefHeight="150.0" prefWidth="600.0" text="Учет расхода ГСМ" textFill="WHITE">
+                    <font>
+                        <Font size="48.0" />
+                    </font>
+                </Label>
+            </children>
+        </AnchorPane>
+        <JFXButton layoutX="14.0" layoutY="170.0" onAction="#brandGuide" style="-fx-background-color: #6291bd;" text="Бренды автомобилей">
+            <font>
+                <Font size="18.0" />
+            </font>
+        </JFXButton>
+        <JFXButton layoutX="13.0" layoutY="231.0" onAction="#modelGuide" style="-fx-background-color: #6291bd;" text="Модели автомобилей">
+            <font>
+                <Font size="18.0" />
+            </font>
+        </JFXButton>
+        <JFXButton layoutX="14.0" layoutY="294.0" onAction="#carGuide" style="-fx-background-color: #6291bd;" text="Автомобили">
+            <font>
+                <Font size="18.0" />
+            </font>
+        </JFXButton>
+        <JFXButton layoutX="300.0" layoutY="170.0" onAction="#driverGuide" style="-fx-background-color: #6291bd;" text="Водители">
+            <font>
+                <Font size="18.0" />
+            </font>
+        </JFXButton>
+        <JFXButton fx:id="buttonExit" layoutX="300.0" layoutY="294.0" onAction="#exitApp" style="-fx-background-color: #6291bd;" text="Завершить работу">
+            <font>
+                <Font size="18.0" />
+            </font>
+        </JFXButton>
+      <JFXButton layoutX="300.0" layoutY="231.0" onAction="#itinerarySheets" style="-fx-background-color: #6291bd;" text="Маршрутные листы">
+         <font>
+            <Font size="18.0" />
+         </font>
+      </JFXButton>
+    </children>
+</AnchorPane>

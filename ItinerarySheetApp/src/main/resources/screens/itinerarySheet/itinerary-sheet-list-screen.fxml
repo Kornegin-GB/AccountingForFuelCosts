@@ -1,0 +1,59 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import com.jfoenix.controls.JFXButton?>
+<?import com.jfoenix.controls.JFXTreeTableView?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.image.Image?>
+<?import javafx.scene.image.ImageView?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.text.Font?>
+
+<AnchorPane prefHeight="768.0" prefWidth="1024.0" xmlns="http://javafx.com/javafx/21" xmlns:fx="http://javafx.com/fxml/1" fx:controller="ru.fsv67.controllers.itinerarySheet.ItinerarySheetListScreenController">
+   <children>
+      <Label alignment="CENTER" layoutX="284.0" layoutY="14.0" text="Маршрутные листы" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="0.0" AnchorPane.topAnchor="20.0">
+         <font>
+            <Font size="24.0" />
+         </font>
+      </Label>
+      <JFXButton fx:id="exitButton" layoutX="14.0" layoutY="717.0" onAction="#onClickExit" style="-fx-background-color: #6291bd;" text="Выход" AnchorPane.bottomAnchor="20.0" AnchorPane.leftAnchor="20.0">
+         <font>
+            <Font size="18.0" />
+         </font>
+      </JFXButton>
+      <JFXTreeTableView fx:id="tableViewItinerarySheet" layoutX="20.0" layoutY="55.0" onMouseClicked="#onClick" onMousePressed="#onSelectingLine" prefHeight="607.0" prefWidth="984.0" AnchorPane.bottomAnchor="147.0" AnchorPane.leftAnchor="20.0" AnchorPane.rightAnchor="20.0" AnchorPane.topAnchor="130.0" />
+      <Label fx:id="labelExitOdometer" alignment="CENTER_RIGHT" layoutX="67.0" layoutY="626.0" prefHeight="20.0" prefWidth="300.0" text="Одометр при выезде:" AnchorPane.bottomAnchor="107.0" AnchorPane.leftAnchor="70.0">
+         <font>
+            <Font size="14.0" />
+         </font>
+      </Label>
+      <Label fx:id="labelReturnOdometer" alignment="CENTER_RIGHT" layoutX="67.0" layoutY="668.0" prefHeight="20.0" prefWidth="300.0" text="Одометр при возвращении:" AnchorPane.bottomAnchor="77.0" AnchorPane.leftAnchor="70.0">
+         <font>
+            <Font size="14.0" />
+         </font>
+      </Label>
+      <Label fx:id="labelExitFuel" alignment="CENTER_RIGHT" layoutX="320.0" layoutY="643.0" prefHeight="20.0" prefWidth="300.0" text="Остаток топлива при выезде:" AnchorPane.bottomAnchor="107.0" AnchorPane.leftAnchor="440.0">
+         <font>
+            <Font size="14.0" />
+         </font>
+      </Label>
+      <Label fx:id="labelReturnFuel" alignment="CENTER_RIGHT" layoutX="320.0" layoutY="673.0" prefHeight="20.0" prefWidth="300.0" text="Остаток топлива при возвращении:" AnchorPane.bottomAnchor="77.0" AnchorPane.leftAnchor="440.0">
+         <font>
+            <Font size="14.0" />
+         </font>
+      </Label>
+      <JFXButton layoutX="30.0" layoutY="69.0" onAction="#onClickCreate" style="-fx-background-color: #6291bd;" text="Создать новый маршрутный лист" AnchorPane.leftAnchor="20.0" AnchorPane.topAnchor="75.0">
+         <font>
+            <Font size="18.0" />
+         </font>
+      </JFXButton>
+      <JFXButton alignment="CENTER" layoutX="370.0" layoutY="71.0" onAction="#onClickDelete" style="-fx-background-color: #6291bd;" AnchorPane.leftAnchor="370.0" AnchorPane.topAnchor="75.0">
+         <graphic>
+            <ImageView fitHeight="29.0" fitWidth="29.0" pickOnBounds="true" preserveRatio="true">
+               <image>
+                  <Image url="@../../images/delete_image.png" />
+               </image>
+            </ImageView>
+         </graphic>
+      </JFXButton>
+   </children>
+</AnchorPane>

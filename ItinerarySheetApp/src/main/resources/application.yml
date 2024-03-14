@@ -1,0 +1,16 @@
+spring:
+  main:
+    web-application-type: none
+
+
+eureka:
+  client:
+    serviceUrl:
+      defaultZone: http://localhost:8761/eureka
+  instance:
+    prefer-ip-address: true
+    status-page-url-path: ${spring.cloud.client.hostname}
+
+application:
+  app:
+    title-app: Учет расхода ГСМ

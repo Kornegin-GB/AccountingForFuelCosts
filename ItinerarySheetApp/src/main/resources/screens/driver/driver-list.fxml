@@ -1,0 +1,60 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import com.jfoenix.controls.JFXButton?>
+<?import com.jfoenix.controls.JFXTreeTableView?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.text.Font?>
+
+
+<AnchorPane prefHeight="700.0" prefWidth="1024.0" xmlns="http://javafx.com/javafx/21" xmlns:fx="http://javafx.com/fxml/1" fx:controller="ru.fsv67.controllers.driver.DriverListScreenController">
+   <children>
+      <JFXButton fx:id="exitButton" layoutX="14.0" layoutY="360.0" minHeight="40.0" minWidth="120.0" onAction="#onClickExit" style="-fx-background-color: #6291bd;" text="Закрыть" AnchorPane.bottomAnchor="20.0" AnchorPane.leftAnchor="20.0">
+         <font>
+            <Font size="18.0" />
+         </font>
+      </JFXButton>
+      <Label alignment="CENTER" layoutX="284.0" layoutY="26.0" text="Справочник водители" AnchorPane.leftAnchor="160.0" AnchorPane.rightAnchor="0.0" AnchorPane.topAnchor="20.0">
+         <font>
+            <Font size="24.0" />
+         </font>
+      </Label>
+      <JFXTreeTableView fx:id="tableViewDriver" layoutX="176.0" onMousePressed="#onSelectingLine" prefHeight="350.0" prefWidth="844.0" AnchorPane.leftAnchor="160.0" AnchorPane.rightAnchor="20.0" AnchorPane.topAnchor="75.0" />
+      <JFXTreeTableView fx:id="tableViewDriverLicense" layoutX="458.0" layoutY="209.0" onMousePressed="#onSelectingLineDriverLicense" AnchorPane.bottomAnchor="20.0" AnchorPane.leftAnchor="160.0" AnchorPane.rightAnchor="20.0" AnchorPane.topAnchor="500.0" />
+      <Label alignment="CENTER" layoutX="512.0" layoutY="456.0" text="Список водительских удостоверений водителя" AnchorPane.leftAnchor="160.0" AnchorPane.rightAnchor="0.0" AnchorPane.topAnchor="445.0">
+         <font>
+            <Font size="24.0" />
+         </font>
+      </Label>
+      <JFXButton layoutX="20.0" layoutY="75.0" minHeight="60.0" minWidth="120.0" onAction="#onClickCreateDriver" style="-fx-background-color: #6291bd;" text="Создать&#10;водителя" textAlignment="CENTER" AnchorPane.leftAnchor="20.0" AnchorPane.topAnchor="75.0">
+         <font>
+            <Font size="18.0" />
+         </font>
+      </JFXButton>
+      <JFXButton fx:id="updateDrive" layoutX="20.0" layoutY="157.0" minHeight="60.0" minWidth="120.0" onAction="#onClickUpdateDriver" style="-fx-background-color: #6291bd;" text="Обновить&#10;водителя" textAlignment="CENTER" AnchorPane.leftAnchor="20.0" AnchorPane.topAnchor="155.0">
+         <font>
+            <Font size="18.0" />
+         </font>
+      </JFXButton>
+      <JFXButton fx:id="deleteDrive" layoutX="20.0" layoutY="236.0" minHeight="60.0" minWidth="120.0" onAction="#onClickDeleteDriver" style="-fx-background-color: #6291bd;" text="Удалить&#10;водителя" textAlignment="CENTER" AnchorPane.leftAnchor="20.0" AnchorPane.topAnchor="235.0">
+         <font>
+            <Font size="18.0" />
+         </font>
+      </JFXButton>
+      <JFXButton fx:id="addDriveLicense" layoutX="20.0" layoutY="319.0" minHeight="60.0" minWidth="120.0" onAction="#onClickAddDriverLicense" style="-fx-background-color: #6291bd;" text="Добавить&#10;ВУ" textAlignment="CENTER" AnchorPane.leftAnchor="20.0" AnchorPane.topAnchor="315.0">
+         <font>
+            <Font size="18.0" />
+         </font>
+      </JFXButton>
+      <JFXButton fx:id="deleteDriveLicense" layoutX="20.0" layoutY="401.0" minHeight="60.0" minWidth="120.0" onAction="#onClickDeleteDriverLicense" style="-fx-background-color: #6291bd;" text="Удалить&#10;ВУ" textAlignment="CENTER" AnchorPane.leftAnchor="20.0" AnchorPane.topAnchor="395.0">
+         <font>
+            <Font size="18.0" />
+         </font>
+      </JFXButton>
+      <JFXButton fx:id="updateDriveLicense" layoutX="20.0" layoutY="480.0" minHeight="60.0" minWidth="120.0" onAction="#onClickUpdateDriverLicense" style="-fx-background-color: #6291bd;" text="Изменить&#10;ВУ" textAlignment="CENTER" AnchorPane.leftAnchor="20.0" AnchorPane.topAnchor="475.0">
+         <font>
+            <Font size="18.0" />
+         </font>
+      </JFXButton>
+   </children>
+</AnchorPane>

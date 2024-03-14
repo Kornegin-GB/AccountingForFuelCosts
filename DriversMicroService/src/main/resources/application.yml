@@ -1,0 +1,24 @@
+server:
+  port: 8083
+  error:
+    include-message: always # Выводить сообщение в отловленной ошибке
+
+spring:
+  datasource:
+    url: jdbc:postgresql://localhost:5432/postgres
+    username: root-user
+    password: root
+    driver-class-name: org.postgresql.Driver
+  jpa:
+    hibernate:
+      ddl-auto: create-drop
+  application:
+    name: drivers-micro-service
+
+eureka:
+  client:
+    serviceUrl:
+      defaultZone: http://localhost:8761/eureka
+  instance:
+    prefer-ip-address: true
+    status-page-url-path: ${spring.cloud.client.hostname}

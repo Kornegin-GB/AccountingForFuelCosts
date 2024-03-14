@@ -1,0 +1,70 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+
+<?import com.jfoenix.controls.*?>
+<?import javafx.scene.control.DatePicker?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.layout.*?>
+<?import javafx.scene.text.*?>
+<AnchorPane xmlns:fx="http://javafx.com/fxml/1" onMouseClicked="#resultCalculate" prefHeight="330.0" prefWidth="300.0"
+            xmlns="http://javafx.com/javafx/21"
+            fx:controller="ru.fsv67.controllers.itinerarySheet.FuelUpdateScreenController">
+    <children>
+        <JFXButton fx:id="exitButton" layoutX="165.0" layoutY="268.0" minWidth="120.0" onAction="#onClickExit"
+                   style="-fx-background-color: #6291bd;" text="Закрыть" AnchorPane.bottomAnchor="20.0"
+                   AnchorPane.rightAnchor="20.0">
+            <font>
+                <Font size="18.0"/>
+            </font>
+        </JFXButton>
+        <JFXButton layoutX="21.0" layoutY="268.0" minWidth="120.0" onAction="#onClickSave"
+                   style="-fx-background-color: #6291bd;" text="Сохранить" AnchorPane.bottomAnchor="20.0"
+                   AnchorPane.leftAnchor="20.0">
+            <font>
+                <Font size="18.0"/>
+            </font>
+        </JFXButton>
+        <DatePicker fx:id="refuelingDatePicker" layoutX="21.0" layoutY="14.0" prefWidth="200.0"
+                    promptText="Дата заправки" style="-fx-font-size: 14;" AnchorPane.leftAnchor="50.0"
+                    AnchorPane.rightAnchor="50.0" AnchorPane.topAnchor="20.0"/>
+        <JFXComboBox fx:id="comboFuelBrand" layoutX="75.0" layoutY="70.0" prefWidth="130.0" promptText="Бренд топлива"
+                     style="-fx-font-size: 14;" AnchorPane.leftAnchor="85.0" AnchorPane.rightAnchor="85.0"
+                     AnchorPane.topAnchor="70.0"/>
+        <Label layoutX="19.0" layoutY="119.0" prefHeight="30.0" text="Количество топлива" AnchorPane.leftAnchor="20.0"
+               AnchorPane.topAnchor="120.0">
+            <font>
+                <Font size="14.0"/>
+            </font>
+        </Label>
+        <Label layoutX="25.0" layoutY="172.0" prefHeight="30.0" text="Цена топлива" AnchorPane.leftAnchor="20.0"
+               AnchorPane.topAnchor="170.0">
+            <font>
+                <Font size="14.0"/>
+            </font>
+        </Label>
+        <Label layoutX="21.0" layoutY="224.0" prefHeight="30.0" text="Сумма топлива" AnchorPane.leftAnchor="20.0"
+               AnchorPane.topAnchor="220.0">
+            <font>
+                <Font size="14.0"/>
+            </font>
+        </Label>
+        <JFXTextField fx:id="fuelQuantityField" layoutX="175.0" layoutY="116.0" prefWidth="60.0"
+                      AnchorPane.topAnchor="120.0">
+            <font>
+                <Font size="14.0"/>
+            </font>
+        </JFXTextField>
+        <JFXTextField fx:id="fuelPriceField" layoutX="175.0" layoutY="170.0" prefWidth="60.0"
+                      AnchorPane.topAnchor="170.0">
+            <font>
+                <Font size="14.0"/>
+            </font>
+        </JFXTextField>
+        <JFXTextField fx:id="fuelSumField" layoutX="175.0" layoutY="220.0" prefWidth="60.0"
+                      AnchorPane.topAnchor="220.0">
+            <font>
+                <Font size="14.0"/>
+            </font>
+        </JFXTextField>
+    </children>
+</AnchorPane>
