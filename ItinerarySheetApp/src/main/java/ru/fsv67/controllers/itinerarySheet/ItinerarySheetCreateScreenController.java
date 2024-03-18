@@ -165,6 +165,7 @@ public class ItinerarySheetCreateScreenController implements Initializable {
             if (!departureAddressField.getText().isEmpty() && !destinationAddressField.getText().isEmpty()) {
                 addressViewList.add(
                         new AddressView(
+                                Integer.toUnsignedLong(addressViewList.size() + 1),
                                 departureAddressField.getText(),
                                 destinationAddressField.getText()
                         )
@@ -398,7 +399,7 @@ public class ItinerarySheetCreateScreenController implements Initializable {
         final TreeItem<AddressView> addressTreeItem =
                 new RecursiveTreeItem<>(
                         FXCollections.observableArrayList(
-                                addressService.setNumberLine(addressViewList)
+                                addressViewList
                         ),
                         RecursiveTreeObject::getChildren
                 );

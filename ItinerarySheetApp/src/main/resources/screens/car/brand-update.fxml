@@ -13,12 +13,12 @@
                 <Font size="18.0" />
             </font>
         </JFXTextField>
-        <JFXButton layoutX="74.0" layoutY="180.0" onAction="#updateBrand" prefHeight="40.0" prefWidth="120.0" ripplerFill="WHITE" style="-fx-background-color: #6291bd;" text="Обновить" AnchorPane.leftAnchor="74.0">
+        <JFXButton buttonType="RAISED" layoutX="74.0" layoutY="180.0" onAction="#updateBrand" prefHeight="40.0" prefWidth="120.0" ripplerFill="#ffff78" style="-fx-background-color: #6291bd;" text="Обновить" textFill="WHITE" AnchorPane.leftAnchor="74.0">
             <font>
                 <Font size="18.0" />
             </font>
         </JFXButton>
-        <JFXButton layoutX="266.0" layoutY="180.0" onAction="#exitForm" prefHeight="40.0" prefWidth="120.0" ripplerFill="WHITE" style="-fx-background-color: #6291bd;" text="Закрыть" AnchorPane.rightAnchor="74.0">
+        <JFXButton buttonType="RAISED" layoutX="266.0" layoutY="180.0" onAction="#exitForm" prefHeight="40.0" prefWidth="120.0" ripplerFill="#ffff78" style="-fx-background-color: #6291bd;" text="Закрыть" textFill="WHITE" AnchorPane.rightAnchor="74.0">
             <font>
                 <Font size="18.0" />
             </font>

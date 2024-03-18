@@ -33,6 +33,11 @@ public class MainScreenController implements Initializable {
     private Button buttonExit;
 
     @FXML
+    void brandFuel() {
+
+    }
+
+    @FXML
     void brandGuide() {
         Stage stage = new Stage();
         Scene scene = new Scene(fxWeaver.loadView(BrandListScreenController.class));

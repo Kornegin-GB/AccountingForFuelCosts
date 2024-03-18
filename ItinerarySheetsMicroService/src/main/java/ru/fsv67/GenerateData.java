@@ -42,9 +42,8 @@ public class GenerateData {
                 12622,
                 12722,
                 List.of(
-                        new AddressEntity("Смоленск"),
-                        new AddressEntity("Вязьма"),
-                        new AddressEntity("Смоленск")
+                        new AddressEntity("Смоленск", "Вязьма"),
+                        new AddressEntity("Вязьма", "Смоленск")
                 ),
                 List.of(
                         new FuelRecordEntity(
@@ -64,9 +63,8 @@ public class GenerateData {
                 11235,
                 11484,
                 List.of(
-                        new AddressEntity("Смоленск"),
-                        new AddressEntity("Рославль"),
-                        new AddressEntity("Смоленск")
+                        new AddressEntity("Смоленск", "Рославль"),
+                        new AddressEntity("Рославль", "Смоленск")
                 ),
                 List.of(
                         new FuelRecordEntity(
@@ -93,9 +91,8 @@ public class GenerateData {
                 11484,
                 12284,
                 List.of(
-                        new AddressEntity("Смоленск"),
-                        new AddressEntity("Москва"),
-                        new AddressEntity("Смоленск")
+                        new AddressEntity("Смоленск", "Москва"),
+                        new AddressEntity("Москва", "Смоленск")
                 ),
                 List.of(
                         new FuelRecordEntity(

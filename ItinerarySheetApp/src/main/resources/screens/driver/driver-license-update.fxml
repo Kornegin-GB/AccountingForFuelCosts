@@ -1,132 +1,141 @@
 <?xml version="1.0" encoding="UTF-8"?>
 
-<?import com.jfoenix.controls.JFXButton?>
-<?import com.jfoenix.controls.JFXCheckBox?>
-<?import com.jfoenix.controls.JFXComboBox?>
-<?import com.jfoenix.controls.JFXTextField?>
-<?import javafx.scene.Group?>
+<?import com.jfoenix.controls.*?>
 <?import javafx.scene.control.DatePicker?>
 <?import javafx.scene.control.Label?>
-<?import javafx.scene.layout.AnchorPane?>
-<?import javafx.scene.text.Font?>
-
-<AnchorPane prefHeight="500.0" prefWidth="600.0" xmlns="http://javafx.com/javafx/21" xmlns:fx="http://javafx.com/fxml/1" fx:controller="ru.fsv67.controllers.driver.DriverLicenseUpdateScreenController">
+<?import javafx.scene.Group?>
+<?import javafx.scene.layout.*?>
+<?import javafx.scene.text.*?>
+<AnchorPane xmlns:fx="http://javafx.com/fxml/1" prefHeight="500.0" prefWidth="600.0" xmlns="http://javafx.com/javafx/21"
+            fx:controller="ru.fsv67.controllers.driver.DriverLicenseUpdateScreenController">
     <children>
-        <JFXButton layoutX="82.0" layoutY="484.0" minHeight="40.0" minWidth="120.0" onAction="#onClickUpdate" style="-fx-background-color: #6291bd;" text="Обновить" AnchorPane.bottomAnchor="20.0" AnchorPane.leftAnchor="90.0">
+        <JFXButton buttonType="RAISED" layoutX="82.0" layoutY="484.0" minHeight="40.0" minWidth="120.0"
+                   onAction="#onClickUpdate" ripplerFill="#ffff78" style="-fx-background-color: #6291bd;"
+                   text="Обновить" textFill="WHITE" AnchorPane.bottomAnchor="20.0" AnchorPane.leftAnchor="90.0">
             <font>
-                <Font size="18.0" />
+                <Font size="18.0"/>
             </font>
         </JFXButton>
-        <Label alignment="CENTER" layoutX="284.0" layoutY="26.0" text="Обновление водительского удостовирения" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="0.0" AnchorPane.topAnchor="20.0">
+        <Label alignment="CENTER" layoutX="284.0" layoutY="26.0" text="Обновление водительского удостовирения"
+               AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="0.0" AnchorPane.topAnchor="20.0">
             <font>
-                <Font size="24.0" />
+                <Font size="24.0"/>
             </font>
         </Label>
-        <JFXTextField fx:id="seriesVUField" layoutX="22.0" layoutY="79.0" minWidth="200.0" promptText="Серия ВУ" AnchorPane.leftAnchor="40.0" AnchorPane.topAnchor="75.0">
+        <JFXTextField fx:id="seriesVUField" layoutX="22.0" layoutY="79.0" minWidth="200.0" promptText="Серия ВУ"
+                      AnchorPane.leftAnchor="40.0" AnchorPane.topAnchor="75.0">
             <font>
-                <Font size="18.0" />
+                <Font size="18.0"/>
             </font>
         </JFXTextField>
-        <JFXTextField fx:id="numberVUField" layoutX="245.0" layoutY="79.0" minWidth="200.0" promptText="Номер ВУ" AnchorPane.rightAnchor="40.0" AnchorPane.topAnchor="75.0">
+        <JFXTextField fx:id="numberVUField" layoutX="245.0" layoutY="79.0" minWidth="200.0" promptText="Номер ВУ"
+                      AnchorPane.rightAnchor="40.0" AnchorPane.topAnchor="75.0">
             <font>
-                <Font size="18.0" />
+                <Font size="18.0"/>
             </font>
         </JFXTextField>
-        <Group fx:id="categories" layoutX="30.0" layoutY="172.0" AnchorPane.leftAnchor="55.0" AnchorPane.rightAnchor="55.1619873046875">
+        <Group fx:id="categories" layoutX="30.0" layoutY="172.0" AnchorPane.leftAnchor="55.0"
+               AnchorPane.rightAnchor="55.1619873046875">
             <children>
-                <JFXCheckBox layoutX="10.0" layoutY="6.0" text="A">
+                <JFXCheckBox checkedColor="#6291bd" layoutX="10.0" layoutY="6.0" text="A">
                     <font>
-                        <Font size="18.0" />
+                        <Font size="18.0"/>
                     </font>
                 </JFXCheckBox>
-                <JFXCheckBox layoutX="10.0" layoutY="46.0" text="A1">
+                <JFXCheckBox checkedColor="#6291bd" layoutX="10.0" layoutY="46.0" text="A1">
                     <font>
-                        <Font size="18.0" />
+                        <Font size="18.0"/>
                     </font>
                 </JFXCheckBox>
-                <JFXCheckBox layoutX="10.0" layoutY="86.0" text="B">
+                <JFXCheckBox checkedColor="#6291bd" layoutX="10.0" layoutY="86.0" text="B">
                     <font>
-                        <Font size="18.0" />
+                        <Font size="18.0"/>
                     </font>
                 </JFXCheckBox>
-                <JFXCheckBox layoutX="95.0" layoutY="6.0" text="BE">
+                <JFXCheckBox checkedColor="#6291bd" layoutX="95.0" layoutY="6.0" text="BE">
                     <font>
-                        <Font size="18.0" />
+                        <Font size="18.0"/>
                     </font>
                 </JFXCheckBox>
-                <JFXCheckBox layoutX="95.0" layoutY="46.0" text="B1">
+                <JFXCheckBox checkedColor="#6291bd" layoutX="95.0" layoutY="46.0" text="B1">
                     <font>
-                        <Font size="18.0" />
+                        <Font size="18.0"/>
                     </font>
                 </JFXCheckBox>
-                <JFXCheckBox layoutX="95.0" layoutY="86.0" text="C">
+                <JFXCheckBox checkedColor="#6291bd" layoutX="95.0" layoutY="86.0" text="C">
                     <font>
-                        <Font size="18.0" />
+                        <Font size="18.0"/>
                     </font>
                 </JFXCheckBox>
-                <JFXCheckBox layoutX="180.0" layoutY="6.0" text="CE">
+                <JFXCheckBox checkedColor="#6291bd" layoutX="180.0" layoutY="6.0" text="CE">
                     <font>
-                        <Font size="18.0" />
+                        <Font size="18.0"/>
                     </font>
                 </JFXCheckBox>
-                <JFXCheckBox layoutX="180.0" layoutY="46.0" text="C1">
+                <JFXCheckBox checkedColor="#6291bd" layoutX="180.0" layoutY="46.0" text="C1">
                     <font>
-                        <Font size="18.0" />
+                        <Font size="18.0"/>
                     </font>
                 </JFXCheckBox>
-                <JFXCheckBox layoutX="180.0" layoutY="86.0" text="C1E">
+                <JFXCheckBox checkedColor="#6291bd" layoutX="180.0" layoutY="86.0" text="C1E">
                     <font>
-                        <Font size="18.0" />
+                        <Font size="18.0"/>
                     </font>
                 </JFXCheckBox>
-                <JFXCheckBox layoutX="265.0" layoutY="6.0" text="D">
+                <JFXCheckBox checkedColor="#6291bd" layoutX="265.0" layoutY="6.0" text="D">
                     <font>
-                        <Font size="18.0" />
+                        <Font size="18.0"/>
                     </font>
                 </JFXCheckBox>
-                <JFXCheckBox layoutX="265.0" layoutY="46.0" text="DE">
+                <JFXCheckBox checkedColor="#6291bd" layoutX="265.0" layoutY="46.0" text="DE">
                     <font>
-                        <Font size="18.0" />
+                        <Font size="18.0"/>
                     </font>
                 </JFXCheckBox>
-                <JFXCheckBox layoutX="265.0" layoutY="86.0" text="D1">
+                <JFXCheckBox checkedColor="#6291bd" layoutX="265.0" layoutY="86.0" text="D1">
                     <font>
-                        <Font size="18.0" />
+                        <Font size="18.0"/>
                     </font>
                 </JFXCheckBox>
-                <JFXCheckBox layoutX="350.0" layoutY="6.0" text="D1E">
+                <JFXCheckBox checkedColor="#6291bd" layoutX="350.0" layoutY="6.0" text="D1E">
                     <font>
-                        <Font size="18.0" />
+                        <Font size="18.0"/>
                     </font>
                 </JFXCheckBox>
-                <JFXCheckBox layoutX="350.0" layoutY="46.0" text="M">
+                <JFXCheckBox checkedColor="#6291bd" layoutX="350.0" layoutY="46.0" text="M">
                     <font>
-                        <Font size="18.0" />
+                        <Font size="18.0"/>
                     </font>
                 </JFXCheckBox>
-                <JFXCheckBox layoutX="435.0" layoutY="6.0" text="Tm">
+                <JFXCheckBox checkedColor="#6291bd" layoutX="435.0" layoutY="6.0" text="Tm">
                     <font>
-                        <Font size="18.0" />
+                        <Font size="18.0"/>
                     </font>
                 </JFXCheckBox>
-                <JFXCheckBox layoutX="435.0" layoutY="46.0" text="Tb">
+                <JFXCheckBox checkedColor="#6291bd" layoutX="435.0" layoutY="46.0" text="Tb">
                     <font>
-                        <Font size="18.0" />
+                        <Font size="18.0"/>
                     </font>
                 </JFXCheckBox>
             </children>
         </Group>
-        <Label layoutX="63.0" layoutY="141.0" text="Категории" AnchorPane.leftAnchor="55.0" AnchorPane.rightAnchor="0.0" AnchorPane.topAnchor="141.0">
+        <Label layoutX="63.0" layoutY="141.0" text="Категории" AnchorPane.leftAnchor="55.0" AnchorPane.rightAnchor="0.0"
+               AnchorPane.topAnchor="141.0">
             <font>
-                <Font size="18.0" />
+                <Font size="18.0"/>
             </font>
         </Label>
-        <DatePicker fx:id="issueDate" layoutX="30.0" layoutY="310.0" minHeight="40.0" minWidth="200.0" promptText="Дата выдачи" style="-fx-font-size: 18;" AnchorPane.leftAnchor="30.0" />
-        <DatePicker fx:id="validityDate" layoutX="309.0" layoutY="310.0" minHeight="40.0" minWidth="200.0" promptText="Дата окончания" style="-fx-font-size: 18;" AnchorPane.rightAnchor="30.0" />
-        <JFXComboBox fx:id="comboReally" layoutX="185.0" layoutY="370.0" minHeight="40.0" minWidth="250.0" style="-fx-font-size: 18;" AnchorPane.leftAnchor="175.0" AnchorPane.rightAnchor="175.0" />
-        <JFXButton layoutX="390.0" layoutY="484.0" minHeight="40.0" minWidth="120.0" onAction="#onClickExit" style="-fx-background-color: #6291bd;" text="Закрыть" AnchorPane.bottomAnchor="20.0" AnchorPane.rightAnchor="90.0">
+        <DatePicker fx:id="issueDate" layoutX="30.0" layoutY="310.0" minHeight="40.0" minWidth="200.0"
+                    promptText="Дата выдачи" style="-fx-font-size: 18;" AnchorPane.leftAnchor="30.0"/>
+        <DatePicker fx:id="validityDate" layoutX="309.0" layoutY="310.0" minHeight="40.0" minWidth="200.0"
+                    promptText="Дата окончания" style="-fx-font-size: 18;" AnchorPane.rightAnchor="30.0"/>
+        <JFXComboBox fx:id="comboReally" layoutX="185.0" layoutY="370.0" minHeight="40.0" minWidth="250.0"
+                     style="-fx-font-size: 18;" AnchorPane.leftAnchor="175.0" AnchorPane.rightAnchor="175.0"/>
+        <JFXButton buttonType="RAISED" layoutX="390.0" layoutY="484.0" minHeight="40.0" minWidth="120.0"
+                   onAction="#onClickExit" ripplerFill="#ffff78" style="-fx-background-color: #6291bd;" text="Закрыть"
+                   textFill="WHITE" AnchorPane.bottomAnchor="20.0" AnchorPane.rightAnchor="90.0">
             <font>
-                <Font size="18.0" />
+                <Font size="18.0"/>
             </font>
         </JFXButton>
     </children>

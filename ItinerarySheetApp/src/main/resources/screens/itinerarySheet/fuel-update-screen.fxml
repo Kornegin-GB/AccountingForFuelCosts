@@ -11,14 +11,16 @@
             fx:controller="ru.fsv67.controllers.itinerarySheet.FuelUpdateScreenController">
     <children>
         <JFXButton fx:id="exitButton" layoutX="165.0" layoutY="268.0" minWidth="120.0" onAction="#onClickExit"
-                   style="-fx-background-color: #6291bd;" text="Закрыть" AnchorPane.bottomAnchor="20.0"
+                   ripplerFill="#ffff78" style="-fx-background-color: #6291bd;" buttonType="RAISED" textFill="WHITE"
+                   text="Закрыть" AnchorPane.bottomAnchor="20.0"
                    AnchorPane.rightAnchor="20.0">
             <font>
                 <Font size="18.0"/>
             </font>
         </JFXButton>
         <JFXButton layoutX="21.0" layoutY="268.0" minWidth="120.0" onAction="#onClickSave"
-                   style="-fx-background-color: #6291bd;" text="Сохранить" AnchorPane.bottomAnchor="20.0"
+                   ripplerFill="#ffff78" style="-fx-background-color: #6291bd;" buttonType="RAISED" textFill="WHITE"
+                   text="Сохранить" AnchorPane.bottomAnchor="20.0"
                    AnchorPane.leftAnchor="20.0">
             <font>
                 <Font size="18.0"/>

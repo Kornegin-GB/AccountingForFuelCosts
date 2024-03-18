@@ -13,10 +13,13 @@ public class AddressEntity {
     @Id
     @GeneratedValue(strategy = GenerationType.IDENTITY)
     private Long id;
-    @Column(name = "address_name")
-    private String address;
+    @Column(name = "departure_address_name")
+    private String departureAddress;
+    @Column(name = "destination_address_name")
+    private String destinationAddress;
 
-    public AddressEntity(String address) {
-        this.address = address;
+    public AddressEntity(String departureAddress, String destinationAddress) {
+        this.departureAddress = departureAddress;
+        this.destinationAddress = destinationAddress;
     }
 }

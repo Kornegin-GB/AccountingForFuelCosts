@@ -1,87 +1,105 @@
 <?xml version="1.0" encoding="UTF-8"?>
 
 <?import com.browniebytes.javafx.control.DateTimePicker?>
-<?import com.jfoenix.controls.JFXButton?>
-<?import com.jfoenix.controls.JFXComboBox?>
-<?import com.jfoenix.controls.JFXTextField?>
-<?import com.jfoenix.controls.JFXTreeTableView?>
-<?import javafx.scene.control.Label?>
-<?import javafx.scene.control.Separator?>
-<?import javafx.scene.control.Tab?>
-<?import javafx.scene.control.TabPane?>
-<?import javafx.scene.layout.AnchorPane?>
-<?import javafx.scene.text.Font?>
-
-<AnchorPane prefHeight="700.0" prefWidth="600.0" xmlns="http://javafx.com/javafx/21" xmlns:fx="http://javafx.com/fxml/1" fx:controller="ru.fsv67.controllers.itinerarySheet.ItinerarySheetUpdateScreenController">
+<?import com.jfoenix.controls.*?>
+<?import javafx.scene.control.*?>
+<?import javafx.scene.layout.*?>
+<?import javafx.scene.text.*?>
+<AnchorPane xmlns:fx="http://javafx.com/fxml/1" prefHeight="700.0" prefWidth="600.0" xmlns="http://javafx.com/javafx/21"
+            fx:controller="ru.fsv67.controllers.itinerarySheet.ItinerarySheetUpdateScreenController">
     <children>
-        <Label alignment="CENTER" layoutX="284.0" layoutY="20.0" text="Новый маршрутный лист" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="0.0" AnchorPane.topAnchor="20.0">
+        <Label alignment="CENTER" layoutX="284.0" layoutY="20.0" text="Новый маршрутный лист"
+               AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="0.0" AnchorPane.topAnchor="20.0">
             <font>
-                <Font size="24.0" />
+                <Font size="24.0"/>
             </font>
         </Label>
-        <JFXButton layoutX="14.0" layoutY="349.0" minWidth="120.0" onAction="#onClickExit" style="-fx-background-color: #6291bd;" text="Закрыть" AnchorPane.bottomAnchor="20.0" AnchorPane.rightAnchor="20.0">
+        <JFXButton layoutX="14.0" layoutY="349.0" minWidth="120.0" onAction="#onClickExit"
+                   ripplerFill="#ffff78" style="-fx-background-color: #6291bd;" buttonType="RAISED" textFill="WHITE"
+                   text="Закрыть" AnchorPane.bottomAnchor="20.0"
+                   AnchorPane.rightAnchor="20.0">
             <font>
-                <Font size="18.0" />
+                <Font size="18.0"/>
             </font>
         </JFXButton>
-        <JFXTextField fx:id="numberItinerarySheet" editable="false" layoutX="14.0" layoutY="55.0" prefHeight="30.0" prefWidth="100.0" promptText="Номер листа" AnchorPane.leftAnchor="20.0" AnchorPane.topAnchor="75.0">
+        <JFXTextField fx:id="numberItinerarySheet" editable="false" layoutX="14.0" layoutY="55.0" prefHeight="30.0"
+                      prefWidth="100.0" promptText="Номер листа" AnchorPane.leftAnchor="20.0"
+                      AnchorPane.topAnchor="75.0">
             <font>
-                <Font size="14.0" />
+                <Font size="14.0"/>
             </font>
         </JFXTextField>
-        <JFXComboBox fx:id="comboCarList" disable="true" layoutX="20.0" layoutY="121.0" prefHeight="26.0" prefWidth="250.0" promptText="Автомобиль" style="-fx-font-size: 14;" AnchorPane.leftAnchor="20.0" />
-        <JFXComboBox fx:id="comboDriverList" layoutX="280.0" layoutY="121.0" prefHeight="26.0" prefWidth="250.0" promptText="Водитель" style="-fx-font-size: 14;" AnchorPane.rightAnchor="20.0" />
-        <DateTimePicker fx:id="exitDateTime" accessibleRole="DATE_PICKER" layoutX="22.0" layoutY="170.0" style="-fx-font-size: 14;" AnchorPane.leftAnchor="20.0" />
-        <DateTimePicker fx:id="returnDateTime" layoutX="383.0" layoutY="170.0" style="-fx-font-size: 14;" AnchorPane.rightAnchor="20.0" />
-        <JFXButton layoutX="21.0" layoutY="543.0" minWidth="120.0" onAction="#onClickSave" style="-fx-background-color: #6291bd;" text="Обновить" AnchorPane.bottomAnchor="20.0" AnchorPane.leftAnchor="20.0">
+        <JFXComboBox fx:id="comboCarList" disable="true" layoutX="20.0" layoutY="121.0" prefHeight="26.0"
+                     prefWidth="250.0" promptText="Автомобиль" style="-fx-font-size: 14;" AnchorPane.leftAnchor="20.0"/>
+        <JFXComboBox fx:id="comboDriverList" layoutX="280.0" layoutY="121.0" prefHeight="26.0" prefWidth="250.0"
+                     promptText="Водитель" style="-fx-font-size: 14;" AnchorPane.rightAnchor="20.0"/>
+        <DateTimePicker fx:id="exitDateTime" accessibleRole="DATE_PICKER" layoutX="22.0" layoutY="170.0"
+                        style="-fx-font-size: 14;" AnchorPane.leftAnchor="20.0"/>
+        <DateTimePicker fx:id="returnDateTime" layoutX="383.0" layoutY="170.0" style="-fx-font-size: 14;"
+                        AnchorPane.rightAnchor="20.0"/>
+        <JFXButton layoutX="21.0" layoutY="543.0" minWidth="120.0" onAction="#onClickSave"
+                   ripplerFill="#ffff78" style="-fx-background-color: #6291bd;" buttonType="RAISED" textFill="WHITE"
+                   text="Обновить" AnchorPane.bottomAnchor="20.0"
+                   AnchorPane.leftAnchor="20.0">
             <font>
-                <Font size="18.0" />
+                <Font size="18.0"/>
             </font>
         </JFXButton>
-        <TabPane layoutY="196.0" prefHeight="333.0" prefWidth="500.0" tabClosingPolicy="UNAVAILABLE" AnchorPane.bottomAnchor="70.0" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="0.0" AnchorPane.topAnchor="210.0">
+        <TabPane layoutY="196.0" prefHeight="333.0" prefWidth="500.0" tabClosingPolicy="UNAVAILABLE"
+                 AnchorPane.bottomAnchor="70.0" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="0.0"
+                 AnchorPane.topAnchor="210.0">
             <tabs>
                 <Tab text="Основное">
                     <content>
-                        <AnchorPane minHeight="0.0" minWidth="0.0" onMouseClicked="#inputTextFieldCompleted" prefHeight="180.0" prefWidth="200.0">
+                        <AnchorPane minHeight="0.0" minWidth="0.0" onMouseClicked="#inputTextFieldCompleted"
+                                    prefHeight="180.0" prefWidth="200.0">
                             <children>
-                                <JFXTextField fx:id="exitOdometer" layoutX="20.0" layoutY="27.0" prefWidth="200.0" promptText="Одометр выезда" AnchorPane.leftAnchor="20.0" AnchorPane.topAnchor="20.0">
+                                <JFXTextField fx:id="exitOdometer" layoutX="20.0" layoutY="27.0" prefWidth="200.0"
+                                              promptText="Одометр выезда" AnchorPane.leftAnchor="20.0"
+                                              AnchorPane.topAnchor="20.0">
                                     <font>
-                                        <Font size="14.0" />
+                                        <Font size="14.0"/>
                                     </font>
                                 </JFXTextField>
-                                <JFXTextField fx:id="returnOdometer" layoutX="20.0" layoutY="67.0" prefWidth="200.0" promptText="Одометр возвращения" AnchorPane.leftAnchor="20.0" AnchorPane.topAnchor="70.0">
+                                <JFXTextField fx:id="returnOdometer" layoutX="20.0" layoutY="67.0" prefWidth="200.0"
+                                              promptText="Одометр возвращения" AnchorPane.leftAnchor="20.0"
+                                              AnchorPane.topAnchor="70.0">
                                     <font>
-                                        <Font size="14.0" />
+                                        <Font size="14.0"/>
                                     </font>
                                 </JFXTextField>
-                                <Label layoutX="280.0" layoutY="27.0" minHeight="30.0" minWidth="150.0" text="Остаток при выезде:" AnchorPane.leftAnchor="280.0" AnchorPane.topAnchor="20.0">
+                                <Label layoutX="280.0" layoutY="27.0" minHeight="30.0" minWidth="150.0"
+                                       text="Остаток при выезде:" AnchorPane.leftAnchor="280.0"
+                                       AnchorPane.topAnchor="20.0">
                                     <font>
-                                        <Font size="14.0" />
+                                        <Font size="14.0"/>
                                     </font>
                                 </Label>
-                                <Label layoutX="280.0" layoutY="70.0" minHeight="30.0" minWidth="195.0" text="Остаток при возвращении:">
+                                <Label layoutX="280.0" layoutY="70.0" minHeight="30.0" minWidth="195.0"
+                                       text="Остаток при возвращении:">
                                     <font>
-                                        <Font size="14.0" />
+                                        <Font size="14.0"/>
                                     </font>
                                 </Label>
-                                <Label layoutX="20.0" layoutY="118.0" prefHeight="30.0" prefWidth="100.0" text="Пройдено км:" AnchorPane.leftAnchor="20.0">
+                                <Label layoutX="20.0" layoutY="118.0" prefHeight="30.0" prefWidth="100.0"
+                                       text="Пройдено км:" AnchorPane.leftAnchor="20.0">
                                     <font>
-                                        <Font size="14.0" />
+                                        <Font size="14.0"/>
                                     </font>
                                 </Label>
                                 <Label fx:id="mileageField" layoutX="120.0" layoutY="123.0" text="0">
                                     <font>
-                                        <Font size="14.0" />
+                                        <Font size="14.0"/>
                                     </font>
                                 </Label>
                                 <Label fx:id="initialBalanceField" layoutX="430.0" layoutY="25.0" text="0.0">
                                     <font>
-                                        <Font size="14.0" />
+                                        <Font size="14.0"/>
                                     </font>
                                 </Label>
                                 <Label fx:id="finalBalanceField" layoutX="475.0" layoutY="75.0" text="0.0">
                                     <font>
-                                        <Font size="14.0" />
+                                        <Font size="14.0"/>
                                     </font>
                                 </Label>
                             </children>
@@ -92,25 +110,40 @@
                     <content>
                         <AnchorPane minHeight="0.0" minWidth="0.0" prefHeight="180.0" prefWidth="200.0">
                             <children>
-                                <JFXTreeTableView fx:id="tableRouteCar" editable="true" onMouseClicked="#selectTableRowAddress" AnchorPane.bottomAnchor="125.0" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="0.0" AnchorPane.topAnchor="0.0" />
-                                <JFXButton fx:id="onClickAddStringButton" layoutX="21.0" layoutY="232.0" minWidth="175.0" onAction="#onClickAddStringAddress" style="-fx-background-color: #6291bd;" text="Добавить строку" AnchorPane.bottomAnchor="20.0" AnchorPane.leftAnchor="20.0">
+                                <JFXTreeTableView fx:id="tableRouteCar" editable="true"
+                                                  onMouseClicked="#selectTableRowAddress"
+                                                  AnchorPane.bottomAnchor="125.0" AnchorPane.leftAnchor="0.0"
+                                                  AnchorPane.rightAnchor="0.0" AnchorPane.topAnchor="0.0"/>
+                                <JFXButton fx:id="onClickAddStringButton" layoutX="21.0" layoutY="232.0"
+                                           minWidth="175.0" onAction="#onClickAddStringAddress"
+                                           ripplerFill="#ffff78" style="-fx-background-color: #6291bd;"
+                                           buttonType="RAISED" textFill="WHITE" text="Добавить строку"
+                                           AnchorPane.bottomAnchor="20.0" AnchorPane.leftAnchor="20.0">
                                     <font>
-                                        <Font size="18.0" />
+                                        <Font size="18.0"/>
                                     </font>
                                 </JFXButton>
-                                <JFXButton layoutX="224.0" layoutY="232.0" minWidth="175.0" onAction="#onClickDeleteStringAddress" style="-fx-background-color: #6291bd;" text="Удалить строку" AnchorPane.bottomAnchor="20.0" AnchorPane.leftAnchor="215.0">
+                                <JFXButton layoutX="224.0" layoutY="232.0" minWidth="175.0"
+                                           onAction="#onClickDeleteStringAddress" ripplerFill="#ffff78"
+                                           style="-fx-background-color: #6291bd;" buttonType="RAISED" textFill="WHITE"
+                                           text="Удалить строку" AnchorPane.bottomAnchor="20.0"
+                                           AnchorPane.leftAnchor="215.0">
                                     <font>
-                                        <Font size="18.0" />
+                                        <Font size="18.0"/>
                                     </font>
                                 </JFXButton>
-                                <JFXTextField fx:id="departureAddressField" layoutX="20.0" layoutY="283.0" prefWidth="270.0" promptText="Адрес отправления" AnchorPane.bottomAnchor="75.0" AnchorPane.leftAnchor="20.0">
+                                <JFXTextField fx:id="departureAddressField" layoutX="20.0" layoutY="283.0"
+                                              prefWidth="270.0" promptText="Адрес отправления"
+                                              AnchorPane.bottomAnchor="75.0" AnchorPane.leftAnchor="20.0">
                                     <font>
-                                        <Font size="14.0" />
+                                        <Font size="14.0"/>
                                     </font>
                                 </JFXTextField>
-                                <JFXTextField fx:id="destinationAddressField" layoutX="311.0" layoutY="291.0" prefWidth="270.0" promptText="Адрес назначения" AnchorPane.bottomAnchor="75.0" AnchorPane.rightAnchor="20.0">
+                                <JFXTextField fx:id="destinationAddressField" layoutX="311.0" layoutY="291.0"
+                                              prefWidth="270.0" promptText="Адрес назначения"
+                                              AnchorPane.bottomAnchor="75.0" AnchorPane.rightAnchor="20.0">
                                     <font>
-                                        <Font size="14.0" />
+                                        <Font size="14.0"/>
                                     </font>
                                 </JFXTextField>
                             </children>
@@ -121,30 +154,43 @@
                     <content>
                         <AnchorPane minHeight="0.0" minWidth="0.0" prefHeight="180.0" prefWidth="200.0">
                             <children>
-                                <JFXTreeTableView fx:id="tableFuelRecord" onMouseClicked="#onClickUpdateFuel" prefHeight="238.0" prefWidth="600.0" AnchorPane.bottomAnchor="70.0" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="0.0" AnchorPane.topAnchor="0.0" />
-                                <Label layoutX="14.0" layoutY="241.0" minHeight="30.0" minWidth="175.0" text="Итого заправлено:" AnchorPane.bottomAnchor="20.0" AnchorPane.leftAnchor="20.0">
+                                <JFXTreeTableView fx:id="tableFuelRecord" onMouseClicked="#onClickUpdateFuel"
+                                                  prefHeight="238.0" prefWidth="600.0" AnchorPane.bottomAnchor="70.0"
+                                                  AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="0.0"
+                                                  AnchorPane.topAnchor="0.0"/>
+                                <Label layoutX="14.0" layoutY="241.0" minHeight="30.0" minWidth="175.0"
+                                       text="Итого заправлено:" AnchorPane.bottomAnchor="20.0"
+                                       AnchorPane.leftAnchor="20.0">
                                     <font>
-                                        <Font size="18.0" />
+                                        <Font size="18.0"/>
                                     </font>
                                 </Label>
-                                <Label alignment="BOTTOM_LEFT" layoutX="255.0" layoutY="342.0" text="л." AnchorPane.bottomAnchor="22.0">
+                                <Label alignment="BOTTOM_LEFT" layoutX="255.0" layoutY="342.0" text="л."
+                                       AnchorPane.bottomAnchor="22.0">
                                     <font>
-                                        <Font size="18.0" />
+                                        <Font size="18.0"/>
                                     </font>
                                 </Label>
-                                <Label fx:id="amountRefueledFuel" alignment="CENTER" layoutX="195.0" layoutY="342.0" minWidth="60.0" text="0.0" AnchorPane.bottomAnchor="22.0">
+                                <Label fx:id="amountRefueledFuel" alignment="CENTER" layoutX="195.0" layoutY="342.0"
+                                       minWidth="60.0" text="0.0" AnchorPane.bottomAnchor="22.0">
                                     <font>
-                                        <Font size="18.0" />
+                                        <Font size="18.0"/>
                                     </font>
                                 </Label>
-                                <JFXButton layoutX="471.0" layoutY="230.0" minWidth="120.0" onAction="#onClickDeleteRefueled" style="-fx-background-color: #6291bd;" text="Удалить" AnchorPane.bottomAnchor="20.0" AnchorPane.rightAnchor="20.0">
+                                <JFXButton layoutX="471.0" layoutY="230.0" minWidth="120.0"
+                                           onAction="#onClickDeleteRefueled" ripplerFill="#ffff78"
+                                           style="-fx-background-color: #6291bd;" buttonType="RAISED" textFill="WHITE"
+                                           text="Удалить" AnchorPane.bottomAnchor="20.0" AnchorPane.rightAnchor="20.0">
                                     <font>
-                                        <Font size="18.0" />
+                                        <Font size="18.0"/>
                                     </font>
                                 </JFXButton>
-                                <JFXButton layoutX="325.0" layoutY="232.0" minWidth="120.0" onAction="#onClickAddRefueled" style="-fx-background-color: #6291bd;" text="Добавить" AnchorPane.bottomAnchor="20.0">
+                                <JFXButton layoutX="325.0" layoutY="232.0" minWidth="120.0"
+                                           onAction="#onClickAddRefueled" ripplerFill="#ffff78"
+                                           style="-fx-background-color: #6291bd;" buttonType="RAISED" textFill="WHITE"
+                                           text="Добавить" AnchorPane.bottomAnchor="20.0">
                                     <font>
-                                        <Font size="18.0" />
+                                        <Font size="18.0"/>
                                     </font>
                                 </JFXButton>
                             </children>
@@ -153,78 +199,113 @@
                 </Tab>
                 <Tab text="Расчет топлива">
                     <content>
-                        <AnchorPane minHeight="0.0" minWidth="0.0" onMouseClicked="#onClickRecalculation" prefHeight="180.0" prefWidth="200.0">
+                        <AnchorPane minHeight="0.0" minWidth="0.0" onMouseClicked="#onClickRecalculation"
+                                    prefHeight="180.0" prefWidth="200.0">
                             <children>
-                                <JFXButton layoutX="24.0" layoutY="239.0" minWidth="120.0" onAction="#onClickCalculationFuel" style="-fx-background-color: #6291bd;" text="Расчитать" AnchorPane.bottomAnchor="20.0">
+                                <JFXButton layoutX="24.0" layoutY="239.0" minWidth="120.0"
+                                           onAction="#onClickCalculationFuel" ripplerFill="#ffff78"
+                                           style="-fx-background-color: #6291bd;" buttonType="RAISED" textFill="WHITE"
+                                           text="Рассчитать" AnchorPane.bottomAnchor="20.0">
                                     <font>
-                                        <Font size="18.0" />
+                                        <Font size="18.0"/>
                                     </font>
                                 </JFXButton>
-                                <Label layoutX="24.0" layoutY="26.0" text="Остаток при выезде:" AnchorPane.leftAnchor="20.0" AnchorPane.topAnchor="15.0">
+                                <Label layoutX="24.0" layoutY="26.0" text="Остаток при выезде:"
+                                       AnchorPane.leftAnchor="20.0" AnchorPane.topAnchor="15.0">
                                     <font>
-                                        <Font size="14.0" />
+                                        <Font size="14.0"/>
                                     </font>
                                 </Label>
-                                <Label layoutX="24.0" layoutY="58.0" text="Остаток при возвращении:" AnchorPane.leftAnchor="20.0" AnchorPane.topAnchor="65.0">
+                                <Label layoutX="24.0" layoutY="58.0" text="Остаток при возвращении:"
+                                       AnchorPane.leftAnchor="20.0" AnchorPane.topAnchor="65.0">
                                     <font>
-                                        <Font size="14.0" />
+                                        <Font size="14.0"/>
                                     </font>
                                 </Label>
-                                <Label layoutX="24.0" layoutY="94.0" text="Израсходованно по норме:" AnchorPane.leftAnchor="20.0" AnchorPane.topAnchor="115.0">
+                                <Label layoutX="24.0" layoutY="94.0" text="Израсходовано по норме:"
+                                       AnchorPane.leftAnchor="20.0" AnchorPane.topAnchor="115.0">
                                     <font>
-                                        <Font size="14.0" />
+                                        <Font size="14.0"/>
                                     </font>
                                 </Label>
-                                <Label layoutX="24.0" layoutY="132.0" text="Израсходованно по факту:" AnchorPane.leftAnchor="20.0" AnchorPane.topAnchor="165.0">
+                                <Label layoutX="24.0" layoutY="132.0" text="Израсходовано по факту:"
+                                       AnchorPane.leftAnchor="20.0" AnchorPane.topAnchor="165.0">
                                     <font>
-                                        <Font size="14.0" />
+                                        <Font size="14.0"/>
                                     </font>
                                 </Label>
-                                <Separator layoutY="29.0" prefHeight="0.0" prefWidth="600.0" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="0.0" AnchorPane.topAnchor="50.0" />
-                                <Separator layoutX="14.0" layoutY="84.0" prefHeight="0.0" prefWidth="600.0" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="0.0" AnchorPane.topAnchor="100.0" />
-                                <Separator layoutX="24.0" layoutY="139.0" prefHeight="0.0" prefWidth="600.0" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="0.0" AnchorPane.topAnchor="150.0" />
-                                <Separator layoutX="34.0" layoutY="149.0" prefHeight="0.0" prefWidth="600.0" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="0.0" AnchorPane.topAnchor="200.0" />
-                                <Separator layoutX="244.0" layoutY="3.0" orientation="VERTICAL" prefHeight="200.0" AnchorPane.bottomAnchor="89.0" AnchorPane.leftAnchor="250.0" AnchorPane.topAnchor="0.0" />
-                                <JFXTextField fx:id="initialBalanceFieldCalc" alignment="CENTER" editable="false" layoutX="271.0" layoutY="12.0" prefWidth="60.0" text="0.0" AnchorPane.leftAnchor="270.0" AnchorPane.topAnchor="10.0">
+                                <Separator layoutY="29.0" prefHeight="0.0" prefWidth="600.0" AnchorPane.leftAnchor="0.0"
+                                           AnchorPane.rightAnchor="0.0" AnchorPane.topAnchor="50.0"/>
+                                <Separator layoutX="14.0" layoutY="84.0" prefHeight="0.0" prefWidth="600.0"
+                                           AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="0.0"
+                                           AnchorPane.topAnchor="100.0"/>
+                                <Separator layoutX="24.0" layoutY="139.0" prefHeight="0.0" prefWidth="600.0"
+                                           AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="0.0"
+                                           AnchorPane.topAnchor="150.0"/>
+                                <Separator layoutX="34.0" layoutY="149.0" prefHeight="0.0" prefWidth="600.0"
+                                           AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="0.0"
+                                           AnchorPane.topAnchor="200.0"/>
+                                <Separator layoutX="244.0" layoutY="3.0" orientation="VERTICAL" prefHeight="200.0"
+                                           AnchorPane.bottomAnchor="89.0" AnchorPane.leftAnchor="250.0"
+                                           AnchorPane.topAnchor="0.0"/>
+                                <JFXTextField fx:id="initialBalanceFieldCalc" alignment="CENTER" editable="false"
+                                              layoutX="271.0" layoutY="12.0" prefWidth="60.0" text="0.0"
+                                              AnchorPane.leftAnchor="270.0" AnchorPane.topAnchor="10.0">
                                     <font>
-                                        <Font size="14.0" />
+                                        <Font size="14.0"/>
                                     </font>
                                 </JFXTextField>
-                                <JFXTextField fx:id="finalBalanceFieldCalc" alignment="CENTER" editable="false" layoutX="270.0" layoutY="60.0" prefWidth="60.0" text="0.0" AnchorPane.leftAnchor="270.0" AnchorPane.topAnchor="60.0">
+                                <JFXTextField fx:id="finalBalanceFieldCalc" alignment="CENTER" editable="false"
+                                              layoutX="270.0" layoutY="60.0" prefWidth="60.0" text="0.0"
+                                              AnchorPane.leftAnchor="270.0" AnchorPane.topAnchor="60.0">
                                     <font>
-                                        <Font size="14.0" />
+                                        <Font size="14.0"/>
                                     </font>
                                 </JFXTextField>
-                                <JFXTextField fx:id="consumptionOnNorm" alignment="CENTER" editable="false" layoutX="270.0" layoutY="110.0" prefWidth="60.0" text="0.0" AnchorPane.leftAnchor="270.0" AnchorPane.topAnchor="110.0">
+                                <JFXTextField fx:id="consumptionOnNorm" alignment="CENTER" editable="false"
+                                              layoutX="270.0" layoutY="110.0" prefWidth="60.0" text="0.0"
+                                              AnchorPane.leftAnchor="270.0" AnchorPane.topAnchor="110.0">
                                     <font>
-                                        <Font size="14.0" />
+                                        <Font size="14.0"/>
                                     </font>
                                 </JFXTextField>
-                                <JFXTextField fx:id="consumptionOnFact" alignment="CENTER" layoutX="270.0" layoutY="160.0" prefWidth="60.0" text="0.0" AnchorPane.leftAnchor="270.0" AnchorPane.topAnchor="160.0">
+                                <JFXTextField fx:id="consumptionOnFact" alignment="CENTER" layoutX="270.0"
+                                              layoutY="160.0" prefWidth="60.0" text="0.0" AnchorPane.leftAnchor="270.0"
+                                              AnchorPane.topAnchor="160.0">
                                     <font>
-                                        <Font size="14.0" />
+                                        <Font size="14.0"/>
                                     </font>
                                 </JFXTextField>
-                                <Separator layoutX="44.0" layoutY="220.0" prefHeight="0.0" prefWidth="600.0" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="0.0" AnchorPane.topAnchor="250.0" />
-                                <Separator layoutX="54.0" layoutY="230.0" prefHeight="0.0" prefWidth="600.0" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="0.0" AnchorPane.topAnchor="300.0" />
-                                <Label layoutX="20.0" layoutY="217.0" text="Экономия:" AnchorPane.leftAnchor="20.0" AnchorPane.topAnchor="215.0">
+                                <Separator layoutX="44.0" layoutY="220.0" prefHeight="0.0" prefWidth="600.0"
+                                           AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="0.0"
+                                           AnchorPane.topAnchor="250.0"/>
+                                <Separator layoutX="54.0" layoutY="230.0" prefHeight="0.0" prefWidth="600.0"
+                                           AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="0.0"
+                                           AnchorPane.topAnchor="300.0"/>
+                                <Label layoutX="20.0" layoutY="217.0" text="Экономия:" AnchorPane.leftAnchor="20.0"
+                                       AnchorPane.topAnchor="215.0">
                                     <font>
-                                        <Font size="14.0" />
+                                        <Font size="14.0"/>
                                     </font>
                                 </Label>
-                                <Label layoutX="20.0" layoutY="266.0" text="Пережог:" AnchorPane.leftAnchor="20.0" AnchorPane.topAnchor="265.0">
+                                <Label layoutX="20.0" layoutY="266.0" text="Пережог:" AnchorPane.leftAnchor="20.0"
+                                       AnchorPane.topAnchor="265.0">
                                     <font>
-                                        <Font size="14.0" />
+                                        <Font size="14.0"/>
                                     </font>
                                 </Label>
-                                <JFXTextField fx:id="economyFuel" alignment="CENTER" layoutX="270.0" layoutY="212.0" prefWidth="60.0" text="0.0" AnchorPane.leftAnchor="270.0" AnchorPane.topAnchor="210.0">
+                                <JFXTextField fx:id="economyFuel" alignment="CENTER" layoutX="270.0" layoutY="212.0"
+                                              prefWidth="60.0" text="0.0" AnchorPane.leftAnchor="270.0"
+                                              AnchorPane.topAnchor="210.0">
                                     <font>
-                                        <Font size="14.0" />
+                                        <Font size="14.0"/>
                                     </font>
                                 </JFXTextField>
-                                <JFXTextField fx:id="burnoutFuel" alignment="CENTER" layoutX="270.0" layoutY="259.0" prefWidth="60.0" text="0.0" AnchorPane.leftAnchor="270.0" AnchorPane.topAnchor="260.0">
+                                <JFXTextField fx:id="burnoutFuel" alignment="CENTER" layoutX="270.0" layoutY="259.0"
+                                              prefWidth="60.0" text="0.0" AnchorPane.leftAnchor="270.0"
+                                              AnchorPane.topAnchor="260.0">
                                     <font>
-                                        <Font size="14.0" />
+                                        <Font size="14.0"/>
                                     </font>
                                 </JFXTextField>
                             </children>
@@ -233,10 +314,12 @@
                 </Tab>
             </tabs>
         </TabPane>
-      <JFXButton layoutX="167.0" layoutY="643.0" minWidth="120.0" onAction="#onClickPullData" style="-fx-background-color: #6291bd;" text="Подтянуть данные">
-         <font>
-            <Font size="18.0" />
-         </font>
-      </JFXButton>
+        <JFXButton layoutX="167.0" layoutY="643.0" minWidth="120.0" onAction="#onClickPullData"
+                   ripplerFill="#ffff78" style="-fx-background-color: #6291bd;" buttonType="RAISED" textFill="WHITE"
+                   text="Подтянуть данные">
+            <font>
+                <Font size="18.0"/>
+            </font>
+        </JFXButton>
     </children>
 </AnchorPane>

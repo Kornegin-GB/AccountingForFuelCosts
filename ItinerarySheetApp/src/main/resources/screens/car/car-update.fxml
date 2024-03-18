@@ -1,69 +1,54 @@
 <?xml version="1.0" encoding="UTF-8"?>
 
-<?import com.jfoenix.controls.*?>
+<?import com.jfoenix.controls.JFXButton?>
+<?import com.jfoenix.controls.JFXComboBox?>
+<?import com.jfoenix.controls.JFXTextField?>
 <?import javafx.scene.control.Label?>
-<?import javafx.scene.layout.*?>
-<?import javafx.scene.text.*?>
-<AnchorPane xmlns:fx="http://javafx.com/fxml/1" maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity"
-            minWidth="-Infinity"
-            prefHeight="420.0" prefWidth="660.0" xmlns="http://javafx.com/javafx/21"
-            fx:controller="ru.fsv67.controllers.car.CarUpdateScreenController">
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.text.Font?>
+
+<AnchorPane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="420.0" prefWidth="660.0" xmlns="http://javafx.com/javafx/21" xmlns:fx="http://javafx.com/fxml/1" fx:controller="ru.fsv67.controllers.car.CarUpdateScreenController">
     <children>
-        <JFXTextField fx:id="labelRegisterNumber" layoutX="34.0" layoutY="80.0" prefColumnCount="0" prefHeight="40.0"
-                      prefWidth="250.0" promptText="Регистрационный номер" AnchorPane.leftAnchor="34.0">
+        <JFXTextField fx:id="labelRegisterNumber" layoutX="34.0" layoutY="80.0" prefColumnCount="0" prefHeight="40.0" prefWidth="250.0" promptText="Регистрационный номер" AnchorPane.leftAnchor="34.0">
             <font>
-                <Font size="18.0"/>
+                <Font size="18.0" />
             </font>
         </JFXTextField>
-        <JFXTextField fx:id="labelVin" layoutX="34.0" layoutY="140.0" prefColumnCount="0" prefHeight="40.0"
-                      prefWidth="250.0" promptText="VIN номер" AnchorPane.leftAnchor="34.0">
+        <JFXTextField fx:id="labelVin" layoutX="34.0" layoutY="140.0" prefColumnCount="0" prefHeight="40.0" prefWidth="250.0" promptText="VIN номер" AnchorPane.leftAnchor="34.0">
             <font>
-                <Font size="18.0"/>
+                <Font size="18.0" />
             </font>
         </JFXTextField>
-        <JFXButton layoutX="140.0" layoutY="340.0" onAction="#updateCar" prefHeight="40.0" prefWidth="120.0"
-                   ripplerFill="WHITE" style="-fx-background-color: #6291bd;" text="Обновить"
-                   AnchorPane.bottomAnchor="20.0" AnchorPane.leftAnchor="140.0">
+        <JFXButton buttonType="RAISED" layoutX="140.0" layoutY="340.0" onAction="#updateCar" prefHeight="40.0" prefWidth="120.0" ripplerFill="#ffff78" style="-fx-background-color: #6291bd;" text="Обновить" textFill="WHITE" AnchorPane.bottomAnchor="20.0" AnchorPane.leftAnchor="140.0">
             <font>
-                <Font size="18.0"/>
+                <Font size="18.0" />
             </font>
         </JFXButton>
-        <JFXButton layoutX="465.0" layoutY="340.0" onAction="#exitForm" prefHeight="40.0" prefWidth="120.0"
-                   ripplerFill="WHITE" style="-fx-background-color: #6291bd;" text="Закрыть"
-                   AnchorPane.bottomAnchor="20.0" AnchorPane.rightAnchor="140.0">
+        <JFXButton buttonType="RAISED" layoutX="465.0" layoutY="340.0" onAction="#exitForm" prefHeight="40.0" prefWidth="120.0" ripplerFill="#ffff78" style="-fx-background-color: #6291bd;" text="Закрыть" textFill="WHITE" AnchorPane.bottomAnchor="20.0" AnchorPane.rightAnchor="140.0">
             <font>
-                <Font size="18.0"/>
+                <Font size="18.0" />
             </font>
         </JFXButton>
-        <JFXComboBox fx:id="comboBoxBrand" layoutX="34.0" layoutY="200.0" onHidden="#afterClosingComboBox"
-                     prefHeight="40.0"
-                     prefWidth="250.0" promptText="Марка автомобиля" style="-fx-font-size: 18;"
-                     AnchorPane.leftAnchor="34.0"/>
-        <JFXComboBox fx:id="comboBoxModel" layoutX="364.0" layoutY="200.0" onShowing="#beforeShowingComboBox"
-                     prefHeight="40.0" prefWidth="250.0" promptText="Модель автомобиля" style="-fx-font-size: 18;"
-                     AnchorPane.rightAnchor="46.0"/>
-        <JFXTextField fx:id="labelSeries" layoutX="364.0" layoutY="80.0" prefColumnCount="0" prefHeight="40.0"
-                      prefWidth="250.0" promptText="Серия маршрутного листа" AnchorPane.rightAnchor="46.0">
+        <JFXComboBox fx:id="comboBoxBrand" layoutX="34.0" layoutY="200.0" onHidden="#afterClosingComboBox" prefHeight="40.0" prefWidth="250.0" promptText="Марка автомобиля" style="-fx-font-size: 18;" AnchorPane.leftAnchor="34.0" />
+        <JFXComboBox fx:id="comboBoxModel" layoutX="364.0" layoutY="200.0" onShowing="#beforeShowingComboBox" prefHeight="40.0" prefWidth="250.0" promptText="Модель автомобиля" style="-fx-font-size: 18;" AnchorPane.rightAnchor="46.0" />
+        <JFXTextField fx:id="labelSeries" layoutX="364.0" layoutY="80.0" prefColumnCount="0" prefHeight="40.0" prefWidth="250.0" promptText="Серия маршрутного листа" AnchorPane.rightAnchor="46.0">
             <font>
-                <Font size="18.0"/>
+                <Font size="18.0" />
             </font>
         </JFXTextField>
-        <JFXTextField fx:id="labelOdometer" layoutX="364.0" layoutY="140.0" prefColumnCount="0" prefHeight="40.0"
-                      prefWidth="250.0" promptText="Начальный одометр" AnchorPane.rightAnchor="46.0">
+        <JFXTextField fx:id="labelOdometer" layoutX="364.0" layoutY="140.0" prefColumnCount="0" prefHeight="40.0" prefWidth="250.0" promptText="Начальный одометр" AnchorPane.rightAnchor="46.0">
             <font>
-                <Font size="18.0"/>
+                <Font size="18.0" />
             </font>
         </JFXTextField>
-        <JFXTextField fx:id="labelFuel" layoutX="34.0" layoutY="260.0" prefColumnCount="0" prefHeight="40.0"
-                      prefWidth="250.0" promptText="Норма расхода топлива" AnchorPane.leftAnchor="34.0">
+        <JFXTextField fx:id="labelFuel" layoutX="34.0" layoutY="260.0" prefColumnCount="0" prefHeight="40.0" prefWidth="250.0" promptText="Норма расхода топлива" AnchorPane.leftAnchor="34.0">
             <font>
-                <Font size="18.0"/>
+                <Font size="18.0" />
             </font>
         </JFXTextField>
-        <Label alignment="CENTER" prefHeight="40.0" text="Обновление автомобиля" AnchorPane.leftAnchor="0.0"
-               AnchorPane.rightAnchor="0.0" AnchorPane.topAnchor="20.0">
+        <Label alignment="CENTER" prefHeight="40.0" text="Обновление автомобиля" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="0.0" AnchorPane.topAnchor="20.0">
             <font>
-                <Font size="24.0"/>
+                <Font size="24.0" />
             </font>
         </Label>
     </children>

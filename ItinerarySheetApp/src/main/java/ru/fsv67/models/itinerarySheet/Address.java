@@ -9,9 +9,11 @@ import org.springframework.stereotype.Component;
 @Data
 public class Address {
     private Long id;
-    private String address;
+    private String departureAddress;
+    private String destinationAddress;
 
-    public Address(String address) {
-        this.address = address;
+    public Address(String departureAddress, String destinationAddress) {
+        this.departureAddress = departureAddress;
+        this.destinationAddress = destinationAddress;
     }
 }
