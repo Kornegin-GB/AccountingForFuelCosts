@@ -7,6 +7,7 @@ import io.swagger.v3.oas.annotations.media.Schema;
 import io.swagger.v3.oas.annotations.responses.ApiResponse;
 import io.swagger.v3.oas.annotations.tags.Tag;
 import lombok.RequiredArgsConstructor;
+import org.springframework.dao.DataIntegrityViolationException;
 import org.springframework.http.HttpStatus;
 import org.springframework.http.ResponseEntity;
 import org.springframework.web.bind.annotation.*;
@@ -141,6 +142,10 @@ public class FuelBrandController {
                                             schema = @Schema(implementation = FuelBrandEntity.class)
                                     )
                             }),
+                    @ApiResponse(responseCode = "403", description = "Бренд топлива используется. Удаление не возможно",
+                            content = {
+                                    @Content(mediaType = "*/*", schema = @Schema(implementation = String.class))
+                            }),
                     @ApiResponse(responseCode = "404", description = "Бренд с искомым идентификатором не найден.",
                             content = {
                                     @Content(mediaType = "*/*", schema = @Schema(implementation = String.class))
@@ -154,6 +159,8 @@ public class FuelBrandController {
             fuelBrandEntity = fuelBrandService.deleteFuelBrand(id);
         } catch (NoSuchElementException e) {
             throw new ResponseStatusException(HttpStatus.NOT_FOUND, e.getMessage());
+        } catch (DataIntegrityViolationException e) {
+            throw new ResponseStatusException(HttpStatus.FORBIDDEN, e.getMessage());
         }
         return ResponseEntity.status(HttpStatus.OK).body(fuelBrandEntity);
     }

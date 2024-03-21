@@ -16,6 +16,7 @@ import ru.fsv67.controllers.car.BrandListScreenController;
 import ru.fsv67.controllers.car.CarListScreenController;
 import ru.fsv67.controllers.car.ModelListScreenController;
 import ru.fsv67.controllers.driver.DriverListScreenController;
+import ru.fsv67.controllers.itinerarySheet.FuelBrandListScreenController;
 import ru.fsv67.controllers.itinerarySheet.ItinerarySheetListScreenController;
 
 import java.net.URL;
@@ -34,7 +35,14 @@ public class MainScreenController implements Initializable {
 
     @FXML
     void brandFuel() {
-
+        Stage stage = new Stage();
+        Scene scene = new Scene(fxWeaver.loadView(FuelBrandListScreenController.class));
+        stage.setScene(scene);
+        stage.setTitle(titleApp.getTitleApp());
+        stage.setResizable(false);
+        stage.show();
+        Stage windowStage = (Stage) buttonExit.getScene().getWindow();
+        windowStage.close();
     }
 
     @FXML

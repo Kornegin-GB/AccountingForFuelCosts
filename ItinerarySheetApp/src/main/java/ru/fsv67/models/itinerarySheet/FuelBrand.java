@@ -1,13 +1,19 @@
 package ru.fsv67.models.itinerarySheet;
 
+import lombok.AllArgsConstructor;
 import lombok.Data;
-import lombok.RequiredArgsConstructor;
+import lombok.NoArgsConstructor;
 import org.springframework.stereotype.Component;
 
 @Component
-@RequiredArgsConstructor
+@AllArgsConstructor
+@NoArgsConstructor
 @Data
 public class FuelBrand {
     private Long id;
     private String fuelBrandName;
+
+    public FuelBrand(String fuelBrandName) {
+        this.fuelBrandName = fuelBrandName;
+    }
 }

@@ -112,12 +112,12 @@ public class GenerateData {
                                                        int returnOdometer,
                                                        List<AddressEntity> addressEntityList,
                                                        List<FuelRecordEntity> fuelRecordList) {
-        ItinerarySheetEntity itinerarySheetEntity = itinerarySheetRepository.findFirstByCarIdOrderByIdDesc(carId);
-        Car car = gettingCarService.getCarById(carId);
 
-        Double initialBalance = getCurrentFuelBalance(itinerarySheetEntity);
+        Car car = getCar(carId);
+
+        Double initialBalance = getCurrentFuelBalance(getItinerarySheet(carId));
         Double fuelConsumption = calculateFuelConsumption(
-                car.getFuelConsumptionRate(),
+                getFuelRate(car),
                 exitOdometer,
                 returnOdometer
         );
@@ -141,6 +141,34 @@ public class GenerateData {
         itinerarySheet.setAddress(addressRepository.saveAll(addressEntityList));
         itinerarySheet.setFuelRecords(fuelRecordsRepository.saveAll(fuelRecordList));
         return itinerarySheet;
+    }
+
+    private Double getFuelRate(Car car) {
+        if (car.getFuelConsumptionRate() != null) {
+            return car.getFuelConsumptionRate();
+        } else {
+            return 0.0;
+        }
+    }
+
+    private ItinerarySheetEntity getItinerarySheet(Long carId) {
+        ItinerarySheetEntity itinerarySheetEntity;
+        try {
+            itinerarySheetEntity = itinerarySheetRepository.findFirstByCarIdOrderByIdDesc(carId);
+        } catch (Exception e) {
+            itinerarySheetEntity = null;
+        }
+        return itinerarySheetEntity;
+    }
+
+    private Car getCar(Long carId) {
+        Car car;
+        try {
+            car = gettingCarService.getCarById(carId);
+        } catch (Exception e) {
+            car = null;
+        }
+        return car;
     }
 
     private Double getCurrentFuelBalance(ItinerarySheetEntity itinerarySheet) {

@@ -1,6 +1,7 @@
 package ru.fsv67.services;
 
 import lombok.RequiredArgsConstructor;
+import org.springframework.dao.DataIntegrityViolationException;
 import org.springframework.stereotype.Service;
 import ru.fsv67.models.fuel.FuelBrandEntity;
 import ru.fsv67.repositories.FuelBrandRepository;
@@ -60,7 +61,11 @@ public class FuelBrandService {
      */
     public FuelBrandEntity deleteFuelBrand(Long id) throws NoSuchElementException {
         FuelBrandEntity fuelBrand = findFuelBrandById(id);
-        fuelBrandRepository.deleteById(id);
+        try {
+            fuelBrandRepository.deleteById(id);
+        } catch (DataIntegrityViolationException e) {
+            throw new DataIntegrityViolationException("Бренд с id = " + id + " используется. Удаление не возможно");
+        }
         return fuelBrand;
     }
 

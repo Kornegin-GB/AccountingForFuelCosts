@@ -39,11 +39,17 @@ public class GettingCarService {
 
 
     private Car getCarData(Long id) {
-        return webClient.get()
-                .uri(getCarIp() + "/cars/" + id)
-                .retrieve()
-                .bodyToMono(Car.class)
-                .block();
+        try {
+            return webClient.get()
+                    .uri(getCarIp() + "/cars/" + id)
+                    .retrieve()
+                    .bodyToMono(Car.class)
+                    .block();
+        } catch (Exception e) {
+            System.out.println("Соединение с сервером автомобили не установлено");
+            return new Car();
+        }
+
     }
 
     private String getCarIp() {
